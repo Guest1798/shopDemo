@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.fleft {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {}
+
+a:link {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+li a {
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.tac {
+    text-align: center;
+    text-align: -moz-center;
+}
+
+.horizontal-center {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.vertical-center {
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+html,
+body {
+    font-family: "Fira Code";
+    position: relative;
+    height: 100%;
+    font-family: "Fira Code";
+    background-color: rgb(245, 245, 245);
+}

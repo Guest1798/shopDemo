@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 设置页面缓存，提升网页加载速度 -->
+    <meta http-equiv="Cache-Control" content="max-age=7200" />
+    <title>{{title}}</title>
+    <link rel="shortcut icon" href="..\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="..\public\css\base.css">
+    <link rel="stylesheet" href="..\public\css\header-footer.css">
+    <link rel="stylesheet" href="..\public\css\main.css">
+    <link rel="stylesheet" href="..\public\css\font-awesome.min.css">
+    <link rel="stylesheet" href="..\public\css\fira_code.css">
+    <style>
+        .option-bar {
+            width: 100%;
+
+        }
+
+        .option-bar .category {
+            width: 80%;
+            height: 60px;
+            margin: 0 auto;
+            border-bottom: 1px solid gainsboro;
+            overflow: hidden;
+        }
+
+        .option-bar span {
+            padding: 0 10px;
+            line-height: 60px;
+        }
+
+        .option-bar .sort {
+            width: 80%;
+            height: 60px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+
+        .lists .buybtn {
+            opacity: 0;
+            margin-top: 10px;
+            padding: 4px 10px;
+            width: 100px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .lists .buybtn a {
+            color: #fff
+        }
+
+
+        .lists:hover .buybtn {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 头部填充 -->
+    {{include './layout/header.html'}}
+
+
+    <!-- 主要内容 -->
+    <div class="option-bar">
+        <div class="category">
+
+            <span>所有机型</span>
+            <span>|红魔3</span>
+            <span>|努比亚阿尔法</span>
+            <span>|红魔Mars</span>
+            <span>|X</span>
+            <span>|Z18</span>
+            <span>|红魔</span>
+            <span>|V18</span>
+            <span>|Z18mini</span>
+            <span>|Z17S</span>
+            <span>|M3</span>
+
+        </div>
+        <div class="sort">
+            <span>排序</span>
+            <span>价格升序</span>
+            <span>价格降序</span>
+            <span>发布时间</span>
+        </div>
+    </div>
+    <div class="container">
+
+    </div>
+
+    {{block 'body'}}{{/block}}
+
+    <!-- 底部填充 -->
+    {{include './layout/footer.html'}}
+    {{block 'script'}}{{/block}}
+
+</body>
+<script src="..\node_modules\jquery\dist\jquery.min.js"></script>
+<script src="../public/js/headerandfit.js"></script>
+<!-- 请求数据填充页面 -->
+<script>
+    $(function () {
+        $.ajax({
+            url: './public/datas/phone.json',
+            type: 'get',
+            dataType: "json",
+            success: function (data) {
+                init(data);
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+
+        function init(d) {
+            $.each(d.data, function (i) {
+                var list = $('<div class="lists"></div>');
+                var $img = $('<img src="" alt="">');
+                $img.prop('src', this.pho_url);
+                var $ptitle = $('<span></span>');
+                var $price = $('<span class="colorred"></span>');
+                var $prank = $('<span></span>');
+                var $buybtn = $('<span class="buybtn"> <a href=/products/' + i + '>立即购买</a></span>');
+                $ptitle.html(this.pho_name);
+                $price.html("￥:" + this.pho_price)
+                $prank.html("规格:" + this.pho_edition);
+                list.append($img);
+                list.append($ptitle);
+                list.append($price);
+                list.append($prank);
+                list.append($buybtn);
+                $(".container").append(list);
+            });
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{block 'title'}}反馈{{/block}}</title>
+    <!-- <link rel="shortcut icon" href="..\public\images\favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="..\public\css\base.css">
+    <link rel="stylesheet" href="..\public\css\header-footer.css">
+</head>
+
+<body>
+    <!-- 模板 -->
+    <!-- 填充 -->
+    {{include './layout/header.html'}}
+    <h3>{{title}}</h3>
+    {{include './layout/footer.html'}}
+
+</body>
+<script src="..\node_modules\jquery\dist\jquery.min.js"></script>
+
+</html>

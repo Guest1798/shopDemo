@@ -1,0 +1,39 @@
+<header class="headnav">
+    <ul class="navbar">
+        <!-- 品牌 -->
+        <li class="nav-icon"> <a href="/"><i class="fa fa-apple" aria-hidden="true"></i></a></li>
+        <!-- 主要选项 -->
+        <li><a href="../products">手机</a> </li>
+        <li>手表</li>
+        <li>配件</li>
+        <li>Support</li>
+        <!-- 搜索 -->
+        <li class="nav-icon search-btn">
+            <input type="text" class="search-input hide" id="search" />
+            &nbsp;
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </li>
+        <!-- 用户 -->
+        <li class="">
+            {{ if user }}
+            <div class="user">
+                <img src="../public\images\icon_ox6ri2dp7gk\default_1.png" alt="用户头像">
+                <span>{{user.username}}</span>
+                <div class="user-panel hide">
+                    <ul class="tac">
+                        <li><a href="/usercenter">个人中心</a> </li>
+                        <li><a href="/usercenter/ordered">我的订单</a></li>
+                        <li><a href="/logout">退出账号</a> </li>
+                    </ul>
+                </div>
+            </div>
+            {{else}}
+            <a class="login" href="../login">登录&nbsp;<i class="fa fa-user" aria-hidden="true"></i></a>
+            {{/if}}
+        </li>
+    </ul>
+    <ul class="navbar-extend hide"></ul>
+</header>
+
+<script src="..\node_modules\jquery\dist\jquery.min.js"></script>
+<!-- <script src="../public/js/publicwindowfit.js"></script> -->

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户中心</title>
+    <link rel="stylesheet" href="..\public\css\base.css">
+    <link rel="stylesheet" href="..\public\css\header-footer.css">
+    <link rel="stylesheet" href="..\public\css\font-awesome.min.css">
+    <link rel="stylesheet" href="..\public\css\fira_code.css">
+    <style>
+        .container {
+            max-width: 1000px;
+            height: 1200px;
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+        }
+
+        .container .left-nav-bar {
+            width: 240px;
+            height: 100%;
+            border-right: #eee 1px solid;
+        }
+
+        .left-nav-bar ul li {
+            height: 80px;
+            border-bottom: rgb(230, 230, 230) 1px solid;
+
+        }
+
+        .left-nav-bar ul li:hover {
+            background-color: rgba(0, 0, 0, 0.699);
+        }
+
+        .container .content-wraper {
+            width: 759px;
+            min-width: 300px;
+            height: 100%;
+        }
+
+        .container .content-wraper ul li {
+            height: 1200px;
+            width: 100%;
+            background-color: bisque;
+            display: none;
+        }
+
+        .container .content-wraper ul li:first-child {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部填充 -->
+    {{include './layout/header.html'}}
+
+    <div class="container">
+        <div class="left-nav-bar fleft">
+            <ul id="u-nav">
+                <li data-index="0">1</li>
+                <li data-index="1">2</li>
+                <li data-index="2">3</li>
+                <li data-index="3">4</li>
+                <li data-index="4">5</li>
+            </ul>
+        </div>
+        <div class="content-wraper fleft">
+            <ul id="u-content">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 底部填充 -->
+    {{include './layout/footer.html'}}
+</body>
+<script src="..\node_modules\jquery\dist\jquery.min.js"></script>
+<script src="../public/js/headerandfit.js"></script>
+<script>
+    $(document).ready(function () {
+        $.each($("#u-content>li"), function () {
+            $(this).hide();
+            $("#u-content>li").first().show();
+        });
+        $("#u-nav>li").click(function () {
+            var index = this.dataset.index;
+            $.each($("#u-content>li"), function () {
+                $(this).hide();
+                $("#u-content>li").eq(index).show();
+            });
+        })
+    });
+</script>
+
+</html>

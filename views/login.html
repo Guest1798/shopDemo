@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <link rel="shortcut icon" href="..\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="..\public\css\base.css">
+    <link rel="stylesheet" href="..\public\css\header-footer.css">
+    <!-- <link rel="stylesheet" href="..\public\css\main.css"> -->
+    <link rel="stylesheet" href="..\public\css\font-awesome.min.css">
+    <style>
+        body {
+            background-color: transparent;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.384);
+            background-size: cover;
+        }
+
+        .container2 {
+            width: 100%;
+            height: 100%;
+            background-image: url(http://img3.selfimg.com.cn/sofa1000X450/2018/11/21/1542813571_Q5RlxF.jpg);
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        .container .box {
+            width: 600px;
+            height: 400px;
+        }
+
+        .box .brand-logo {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .box form {
+            display: grid;
+            justify-content: center;
+        }
+
+        .box form span {
+            font-size: 12px;
+            color: red;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box i {
+            font-size: 18px;
+            position: absolute;
+            right: 10px;
+            top: 30px;
+            color: #fff;
+        }
+
+        .input-box .mima {
+            font-size: 22px;
+        }
+
+        .box form input {
+            border: 2px solid rgb(255, 255, 255);
+            outline: none;
+            width: 240px;
+            height: 36px;
+            margin: 20px auto;
+            padding: 0 20px;
+            -web-kit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 20px;
+            background-color: transparent;
+            color: white;
+        }
+
+        input::selection {
+            background-color: transparent;
+        }
+
+        input::-internal-autofill-selected {
+            background-color: transparent;
+        }
+
+        #subtn {
+            border: 0;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        a {
+            color: rgb(255, 255, 255);
+            font-size: 12px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        input::-webkit-input-placeholder {
+            color: #e9e9e9;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 主要内容 -->
+    <div class="container">
+        <div class="box">
+            <div class="brand-logo tac">
+                <h2>LOGO</h2>
+            </div>
+            <form action="/login" method="post">
+                <div class="input-box">
+                    <div><i class="fa fa-user-o" aria-hidden="true"></i></div>
+                    <input type="text" name="username" id="username" placeholder="用户名">
+                </div>
+                <span>{{err_message}}</span>
+
+                <div class="input-box">
+                    <div><i class="fa fa-unlock-alt mima" aria-hidden="true"></i></div>
+                    <input type="password" name="password" id="rpwd" placeholder="密码">
+                </div>
+
+                <input type="submit" value="登录" id="subtn">
+            </form>
+            <p class="tac"><a href="/register">没有账号，进入注册</a></p>
+        </div>
+    </div>
+    <div class="container2"></div>
+
+
+
+    {{block 'body'}}{{/block}}
+
+    <!-- 底部填充 -->
+    <!-- {{include './layout/footer.html'}} -->
+    {{block 'script'}}{{/block}}
+</body>
+
+</html>

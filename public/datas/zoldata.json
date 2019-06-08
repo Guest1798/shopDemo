@@ -1,0 +1,320 @@
+{
+    "status": 0,
+    "data": [
+        {
+            "id": "000",
+            "title": "华为P30 Pro（全网通） 屏幕发声，全曲面屏，无线充电，五摄像头",
+            "price": "5488",
+            "rank": "9.6",
+            "picurl": "https://2c.zol-img.com.cn/product/196_220x165/128/ceTjF2ZNi9jk.jpg"
+        },
+        {
+            "id": "001",
+            "title": "OPPO Reno 10倍变焦版（8GB/256GB/全网通） 屏幕类型:全面屏（18:9） 主屏尺寸:6.6英寸 出厂系统内核:ColorOS 6（基于Android 9） 主屏材质:Super AMOLED 主屏分辨率:2340x1080像素 屏幕像素密度:387ppi CPU型号:高通 骁龙855",
+            "price": "4799",
+            "rank": "9.4",
+            "picurl": "https://2c.zol-img.com.cn/product/197_220x165/832/ce1p2rQ9A3NY.jpg"
+        },
+        {
+            "id": "002",
+            "title": "vivo X27（8GB RAM/骁龙710/全网通）  屏幕类型:全面屏（19.5:9常规全面屏） 主屏尺寸:6.39英寸 出厂系统内核:Funtouch OS 9（基于Android 9） 主屏材质:Super AMOLED 主屏分辨率:2340x1080像素 CPU型号:高通 骁龙710 4G网络:移动TD-LTE，联通TD-LTE，联通FDD-LTE，电信TD-LTE，电信FDD-LTE",
+            "price": "3598",
+            "rank": "9.4",
+            "picurl": "https://2a.zol-img.com.cn/product/197_220x165/256/cewpgx26l8HTk.jpg"
+        },
+        {
+            "id": "003",
+            "title": "OPPO K3（6GB/64GB/全网通） 高通骁龙710，升降全面屏，VOOC闪充",
+            "price": "1599",
+            "rank": "8.5",
+            "picurl": "https://2f.zol-img.com.cn/product/198_220x165/777/ceKElXsn3GEQE.jpg"
+        },
+        {
+            "id": "004",
+            "title": "一加7 Pro（12GB/256GB/全网通） Fnatic电竞模式，90Hz刷新率，禅定模式，双立体声扬声器",
+            "price": "4999",
+            "rank": "9.2",
+            "picurl": "https://2c.zol-img.com.cn/product/198_220x165/296/ceXmBdqvlNJU.jpg"
+        },
+        {
+            "id": "005",
+            "title": "realme X（8GB/128GB/全网通） 6.53英寸升降全面屏，光感屏下指纹，VOOC闪充3.0",
+            "price": "1799",
+            "rank": "8.5",
+            "picurl": "https://2c.zol-img.com.cn/product/198_220x165/720/ce9ralTWNV482.jpg"
+        },
+        {
+            "id": "006",
+            "title": "华为P30（8GB RAM/全网通） 屏幕类型:全面屏（水滴屏） 主屏尺寸:6.1英寸 主屏材质:OLED 出厂系统内核:Android 9.0 主屏分辨率:2340x1080像素 屏幕像素密度:422ppi CPU型号:海思 Kirin 980",
+            "price": "3988",
+            "rank": "7.7",
+            "picurl": "https://2b.zol-img.com.cn/product/196_220x165/73/celmEUL7Pm2Lo.jpg"
+        },
+        {
+            "id": "007",
+            "title": "苹果iPhone XR（全网通） 全面屏，快速充电，双卡双待，超视网膜高清显示屏",
+            "price": "5399",
+            "rank": "6.9",
+            "picurl": "https://2d.zol-img.com.cn/product/198_220x165/91/ceXG83Ql63xWE.jpg"
+        },
+        {
+            "id": "008",
+            "title": "荣耀20 Pro（8GB/256GB/全网通） 麒麟980，超广角AI四摄，30倍数字变焦，4000mAh大电池",
+            "price": "3499",
+            "rank": "7.7",
+            "picurl": "https://2e.zol-img.com.cn/product/198_220x165/444/ce4bjvEbavjA.jpg"
+        },
+        {
+            "id": "009",
+            "title": "vivo Z5x（4GB/64GB/全网通） 骁龙710处理器，极点全面屏，5000mAh大电池，超广角AI三摄",
+            "price": "1398",
+            "rank": "9.3",
+            "picurl": "https://2b.zol-img.com.cn/product/198_220x165/991/ceWAPr91KoN8Y.jpg"
+        },
+        {
+            "id": "0010",
+            "title": "Redmi K20（6GB/64GB/全网通） 屏幕类型:全面屏 主屏尺寸:6.39英寸 出厂系统内核:MIUI 10 主屏材质:AMOLED 主屏分辨率:2340x1080像素 屏幕像素密度:403ppi HDR技术:支持",
+            "price": "1999",
+            "rank": "7.4",
+            "picurl": "https://2a.zol-img.com.cn/product/198_220x165/682/cehaoKXZnY8A.jpg"
+        },
+        {
+            "id": "0011",
+            "title": "小米9（6GB RAM/全网通） 4800万像素三摄，水滴全面屏，全息幻彩玻璃机身，第五代极速屏下指纹",
+            "price": "2808",
+            "rank": "5.9",
+            "picurl": "https://2b.zol-img.com.cn/product/196_220x165/53/ceQ1jgZ7vlT8.jpg"
+        },
+        {
+            "id": "0012",
+            "title": "OPPO Reno（8GB RAM/全网通） 屏幕类型:全面屏（18:9） 主屏尺寸:6.4英寸 主屏材质:AMOLED 出厂系统内核:ColorOS 6（基于Android 9） 主屏分辨率:2340x1080像素 屏幕像素密度:402ppi CPU型号:高通 骁龙710",
+            "price": "3599",
+            "rank": "9.5",
+            "picurl": "https://2e.zol-img.com.cn/product/197_220x165/146/ceGbbL9J2Efzw.jpg"
+        },
+        {
+            "id": "0013",
+            "title": "荣耀20（8GB/256GB/全网通） 4800万超广角AI四摄，3200W美颜自拍，NFC，麒麟980",
+            "price": "2999",
+            "rank": "9.4",
+            "picurl": "https://2f.zol-img.com.cn/product/198_220x165/269/ceixRWnOETCdM.jpg"
+        },
+        {
+            "id": "0014",
+            "title": "一加7（8GB/256GB/全网通） 双扬声器，杜比全景声，4800W摄像头",
+            "price": "2999",
+            "rank": "7.5",
+            "picurl": "https://2b.zol-img.com.cn/product/198_220x165/821/cedVhghNNq1BM.jpg"
+        },
+        {
+            "id": "0015",
+            "title": "苹果iPhone XS Max（全网通） 超视网膜显示屏，双卡双待，后置双摄，苹果 A12处理器",
+            "price": "8399",
+            "rank": "8.9",
+            "picurl": "https://2a.zol-img.com.cn/product/198_220x165/766/ce70lxJGbAtfo.jpg"
+        },
+        {
+            "id": "0016",
+            "title": "荣耀V20（6GB RAM/全网通） 液冷散热，GPU Cloud，AI双频GPS，YOYO智慧生命体，3D美体塑型，TOF立体深感摄像头",
+            "price": "2799",
+            "rank": "9.4",
+            "picurl": "https://2a.zol-img.com.cn/product/194_220x165/420/ceDVt6LoFqAOU.jpg"
+        },
+        {
+            "id": "0017",
+            "title": "华为Mate 20 Pro（6GB RAM/全网通） 8曲面玻璃机身，无线充电，AI摄影大师，徕卡三摄",
+            "price": "4899",
+            "rank": "9.3",
+            "picurl": "https://2f.zol-img.com.cn/product/193_220x165/455/ce4UcDzJZTiJs.jpg"
+        },
+        {
+            "id": "0018",
+            "title": "vivo iQOO（8GB RAM/全网通） 骁龙855，44W超快闪充，屏幕指纹，超广角AI三摄",
+            "price": "3298",
+            "rank": "9.5",
+            "picurl": "https://2e.zol-img.com.cn/product/196_220x165/340/ceZD20aTUfn3k.jpg"
+        },
+        {
+            "id": "0019",
+            "title": "三星Galaxy S10（全网通） 超声波屏幕指纹，New Bixby，超广角摄像头",
+            "price": "5999",
+            "rank": "7.3",
+            "picurl": "https://2d.zol-img.com.cn/product/196_220x165/717/ceYAY01FevFoU.jpg"
+        },
+        {
+            "id": "0020",
+            "title": "华为Mate X（全网通） 屏幕类型:全面屏（常规全面屏） 主屏尺寸:8英寸 操作系统:EMUI 9.1（基于Android 9.0） 主屏材质:OLED 主屏分辨率:2480x2200像素 屏幕像素密度:414ppi 5G网络:移动5G（NR TDD），联通5G（NR TDD），电信 5G（NR TDD）",
+            "price": "17500",
+            "rank": "7.3",
+            "picurl": "https://2b.zol-img.com.cn/product/196_220x165/599/cezEeUuDSwL5.jpg"
+        },
+        {
+            "id": "0021",
+            "title": "苹果iPhone X（全网通） 无线充电，面容ID，后置双摄，全面屏",
+            "price": "5999",
+            "rank": "8.4",
+            "picurl": "https://2a.zol-img.com.cn/product/186_220x165/536/cet1hjPNo0d6Q.jpg"
+        },
+        {
+            "id": "0022",
+            "title": "魅族16s（8GB/128GB/全网通） 骁龙855，4800W光学防抖，全面屏",
+            "price": "3498",
+            "rank": "7.5",
+            "picurl": "https://2d.zol-img.com.cn/product/197_220x165/67/ceYYxiNkJJI0k.jpg"
+        },
+        {
+            "id": "0023",
+            "title": "OPPO R17（8GB RAM/全网通） 光感屏幕指纹，AI场景识别，AR实景导航，六代大猩猩玻璃",
+            "price": "2699",
+            "rank": "9.3",
+            "picurl": "https://2c.zol-img.com.cn/product/192_220x165/610/ceWgKT2LVJXDI.jpg"
+        },
+        {
+            "id": "0024",
+            "title": "苹果iPhone XS（全网通） 超视网膜显示屏，后置双摄，苹果 A12处理器",
+            "price": "7899",
+            "rank": "6.4",
+            "picurl": "https://2a.zol-img.com.cn/product/192_220x165/114/ceu5ISnPU1bo.jpg"
+        },
+        {
+            "id": "0025",
+            "title": "OPPO A9（6GB/128GB/全网通） 屏幕类型:全面屏（水滴屏） 主屏尺寸:6.53英寸 主屏材质:TFT材质 出厂系统内核:ColorOS 6（基于Android 9.0） CPU型号:联发科 Helio P70 4G网络:移动TD-LTE，联通TD-LTE，联通FDD-LTE，电信TD-LTE，电信FDD-LTE SIM卡类型:双卡，Nano SIM卡",
+            "price": "1699",
+            "rank": "9.3",
+            "picurl": "https://2d.zol-img.com.cn/product/197_220x165/41/cewVG5Cm1gA.jpg"
+        },
+        {
+            "id": "0027",
+            "title": "华为nova 4e（6GB RAM/全网通） 屏幕类型:全面屏（水滴屏） 主屏尺寸:6.15英寸 操作系统:EMUI 9.0.1（基于Android 9.0） 主屏材质:TFT LCD（IPS） 主屏分辨率:2312x1080像素 屏幕像素密度:415ppi 4G网络:移动TD-LTE，联通TD-LTE，联通FDD-LTE，电信TD-LTE，电信FDD-LTE",
+            "price": "2299",
+            "rank": "9.2",
+            "picurl": "https://2f.zol-img.com.cn/product/197_220x165/949/ceDmCcqt9drJw.jpg"
+        },
+        {
+            "id": "0028",
+            "title": "荣耀8X（4GB RAM/全网通） GPU Turbo，4D震感，AI防伪基站，AI电梯模式，AI拍照",
+            "price": "1299",
+            "rank": "8.5",
+            "picurl": "https://2b.zol-img.com.cn/product/192_220x165/883/ceIooc7zVhQQw.jpg"
+        },
+        {
+            "id": "0029",
+            "title": "华为nova 4（标配版/全网通） 视频美颜，小艺AI语音助手，极点全面屏，人脸识别",
+            "price": "2899",
+            "rank": "9.3",
+            "picurl": "https://2d.zol-img.com.cn/product/194_220x165/881/ce72Kb4cYAXM.jpg"
+        },
+        {
+            "id": "0030",
+            "title": "华为Mate 20（全网通） 超广角三摄，40W超级快充，3D玻璃机身，PC数据同步",
+            "price": "3499",
+            "rank": "9.3",
+            "picurl": "https://2c.zol-img.com.cn/product/193_220x165/440/ce1HvrB4WRlY.jpg"
+        },
+        {
+            "id": "0031",
+            "title": "魅族16Xs（6GB/64GB/全网通） 全面屏AI三摄，4000mAh大电池，Super mTouch屏下指纹",
+            "price": "1698",
+            "rank": "7.4",
+            "picurl": "https://2e.zol-img.com.cn/product/198_220x165/230/cehdoDXnWI4Oc.jpg"
+        },
+        {
+            "id": "0032",
+            "title": "vivo S1 Pro（6GB/256GB/全网通） 屏幕类型:全面屏 主屏尺寸:6.39英寸 主屏材质:Super AMOLED 出厂系统内核:Funtouch OS 9（基于Android 9） 主屏分辨率:2340x1080像素 屏幕像素密度:403ppi CPU型号:高通 骁龙675AIE",
+            "price": "2698",
+            "rank": "9.0",
+            "picurl": "https://2d.zol-img.com.cn/product/197_220x165/409/ce1yaNfhD13w.jpg"
+        },
+        {
+            "id": "0033",
+            "title": "一加7 Pro（6GB/128GB/全网通） Fnatic电竞模式，90Hz刷新率，禅定模式，双立体声扬声器",
+            "price": "3999",
+            "rank": "9.2",
+            "picurl": "https://2d.zol-img.com.cn/product/198_220x165/825/ceenTIZOnJRvU.jpg"
+        },
+        {
+            "id": "0034",
+            "title": "努比亚红魔3（6GB/64GB/全网通） 高效能离心风扇，骁龙855，ICE 2.0散热系统",
+            "price": "2899",
+            "rank": "6.6",
+            "picurl": "https://2a.zol-img.com.cn/product/197_220x165/228/ceLnv0SMP6cE.jpg"
+        },
+        {
+            "id": "0035",
+            "title": "vivo Z3（4GB RAM/全网通） 面部识别，面屏一体式外观，人像模式，前置AI美颜",
+            "price": "1348",
+            "rank": "9.1",
+            "picurl": "https://2f.zol-img.com.cn/product/193_220x165/511/ceP2NDwj7deU.jpg"
+        },
+        {
+            "id": "0036",
+            "title": "苹果iPhone 8 Plus（全网通） 双面玻璃，无线充电，Portrait Lighting，后置双摄",
+            "price": "4699",
+            "rank": "8.7",
+            "picurl": "https://2f.zol-img.com.cn/product/186_220x165/325/ce06maMuqmn6c.jpg"
+        },
+        {
+            "id": "0037",
+            "title": "vivo X27 Pro（8GB RAM/全网通） 屏幕类型:全面屏（20.5:9塔罗屏） 主屏尺寸:6.7英寸 主屏材质:AMOLED 出厂系统内核:Funtouch OS 9（基于Android 9） 主屏分辨率:2460x1080像素 屏幕像素密度:401ppi CPU型号:高通 骁龙710",
+            "price": "3998",
+            "rank": "9.5",
+            "picurl": "https://2c.zol-img.com.cn/product/198_220x165/756/ceK53wgKmGUl2.jpg"
+        },
+        {
+            "id": "0039",
+            "title": "OPPO Reno 10倍变焦版（6GB/128GB/全网通） 屏幕类型:全面屏（18:9） 主屏尺寸:6.6英寸 出厂系统内核:ColorOS 6（基于Android 9） 主屏材质:AMOLED 主屏分辨率:2340x1080像素 屏幕像素密度:387ppi CPU型号:高通 骁龙855",
+            "price": "3999",
+            "rank": "9.4",
+            "picurl": "https://2e.zol-img.com.cn/product/197_220x165/822/ceN2OuJPr55oY.jpg"
+        },
+        {
+            "id": "0040",
+            "title": "Redmi Note 7 Pro（6GB RAM/全网通） 屏幕类型:全面屏（19.5:9水滴屏） 主屏尺寸:6.3英寸 出厂系统内核:Android 9.0 主屏材质:TFT材质（IPS技术） 主屏分辨率:2340x1080 屏幕像素密度:409ppi CPU型号:高通 骁龙675（MSM6150）",
+            "price": "1485",
+            "rank": "6.8",
+            "picurl": "https://2b.zol-img.com.cn/product/196_220x165/295/ce3Qhu1VFwY3A.jpg"
+        },
+        {
+            "id": "0041",
+            "title": "苹果iPhone XI（全网通） 主屏尺寸:6.5英寸 操作系统:iOS 12 主屏分辨率:3840x2160像素 屏幕像素密度:678ppi 4G网络:移动TD-LTE，联通TD-LTE，联通FDD-LTE，电信TD-LTE，电信FDD-LTE CPU型号:苹果 A12 核心数:八核",
+            "price": "概念产品",
+            "rank": "6.0",
+            "picurl": "https://2a.zol-img.com.cn/product/195_220x165/550/ce5SqQIYj4WHQ.jpg"
+        },
+        {
+            "id": "0042",
+            "title": "三星GALAXY A60（6GB/64GB/全网通） 屏幕类型:全面屏 主屏尺寸:6.3英寸 主屏材质:LCD 主屏分辨率:2340x1080像素 屏幕像素密度:350ppi CPU型号:高通 骁龙675 4G网络:全网通：移动TD-LTE，联通TD-LTE，联通FDD-LTE，电信TD-LTE，电信FDD-LTE",
+            "price": "1499",
+            "rank": "9.5",
+            "picurl": "https://2d.zol-img.com.cn/product/197_220x165/875/ceQNCrrja9UJc.jpg"
+        },
+        {
+            "id": "0043",
+            "title": "一加7 Pro（8GB/256GB/全网通） Fnatic电竞模式，90Hz刷新率，禅定模式，双立体声扬声器",
+            "price": "4499",
+            "rank": "9.2",
+            "picurl": "https://2f.zol-img.com.cn/product/198_220x165/833/ceWCQfjGOkzH.jpg"
+        },
+        {
+            "id": "0044",
+            "title": "荣耀20（8GB/128GB/全网通） 4800万超广角AI四摄，3200W美颜自拍，麒麟980，全系8GB内存",
+            "price": "2699",
+            "rank": "9.4",
+            "picurl": "https://2e.zol-img.com.cn/product/198_220x165/268/ceOc39pdAbcEQ.jpg"
+        },
+        {
+            "id": "0045",
+            "title": "华为Mate 20 Pro（8GB RAM/全网通） 多级压感屏内指纹识别，3D深度感知相机，后置徕卡三摄，PC数据同步",
+            "price": "5499",
+            "rank": "9.3",
+            "picurl": "https://2f.zol-img.com.cn/product/193_220x165/737/ce1Q2zIHvOLSI.jpg"
+        },
+        {
+            "id": "0046",
+            "title": "vivo X23（全网通） 3D幻影激光纹，灵动水滴屏，第四代光电屏幕指纹，AI摄影",
+            "price": "3198",
+            "rank": "9.4",
+            "picurl": "https://2f.zol-img.com.cn/product/192_220x165/747/ce63frgxJFc5.jpg"
+        }
+    ]
+}
