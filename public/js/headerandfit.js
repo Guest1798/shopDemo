@@ -23,13 +23,13 @@ $(".search-btn").on("mouseenter", function () {
     $("#search").animate({
         "width": "200px",
         "padding": "0px 10px"
-    }, 100, false);
+    }, 100);
 });
 $(".search-btn").on("mouseleave", function () {
     $("#search").animate({
         "width": "0px",
         "padding": "0px"
-    }, 100, z);
+    }, 100);
 });
 
 $(".user").on("mouseenter", function () {

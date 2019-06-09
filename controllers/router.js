@@ -48,7 +48,7 @@ router.get("/usercenter", function (req, res) {
     res.render("usercenter.html", { title: '用户中心', user: req.session.user });
 });
 router.get("/usercenter/ordered", function (req, res) {
-    res.render("userordered.html", { title: '已购买商品', user: req.session.user });
+    res.render("usercenter.html", { title: '已购买商品', user: req.session.user });
 });
 
 //
@@ -61,6 +61,29 @@ for (var i = 0; i < 35; i++) {
     });
 }
 
+//添加物品到用户购物车，数据已完成
+for (var i = 0; i < 35; i++) {
+    var jrgwc = "/products/" + i + "/shopcart";
+    router.post(jrgwc, function (req, res, next) {
+        //确定用户
+        if (req.session.user) {
+            var urlnow = req.originalUrl;
+            var phoneid = urlnow.slice(10, urlnow.length - 9);
+            var username = req.session.user.username;
+            User.updateOne({ username: username }, { $push: { goods: phoneid } })
+                .then(function (msg) {
+                    console.log(msg);
+                }, function (err) {
+                    console.log(err);
+                });
+            console.log("发送购物车请求", phoneid);
+        }
+        else {
+            console.log("未登录状态无法添加购物车");
+        }
+    });
+}
+
 
 //get请求注册页面
 router.get("/register", function (req, res) {
@@ -69,7 +92,6 @@ router.get("/register", function (req, res) {
 //post请求路由
 //注册功能
 router.post("/register", function (req, res, next) {
-    console.log(req.body);
     var username = req.body.username;
     var email = req.body.email;
     User.findOne({

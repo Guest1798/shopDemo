@@ -1,4 +1,5 @@
 <ul class="toolbar tac">
+    {{if user}}
     <li>
         <i class="fa fa-star-o" aria-hidden="true"></i>
         <span>3</span>
@@ -7,8 +8,35 @@
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         <span>7</span>
         <div class="shoppingcart">
-            <p class="tac">我的购物车</p>
+            <p class="tac">
+                {{user.username}}购物车
+            </p>
+            <ul id="shoppinglist">
+                <p id="sjid">{{user.goods}}</p>
+            </ul>
         </div>
     </li>
+    {{else}}
+
+    <li>
+        <i class="fa fa-star-o" aria-hidden="true"></i>
+        <span>3</span>
+    </li>
+    <li class="shopcart">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <span>7</span>
+        <div class="shoppingcart">
+            <p class="tac">
+                购物车
+            </p>
+            <ul id="shoppinglist">
+                <p id="sjid"></p>
+            </ul>
+        </div>
+    </li>
+    {{/if}}
     <li id="back2top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></li>
 </ul>
+<script>
+    // $("#shoppinglist")
+</script>

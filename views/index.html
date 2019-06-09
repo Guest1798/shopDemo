@@ -81,7 +81,7 @@
             height: 832px;
         }
     </style>
-
+    <script src="..\node_modules\jquery\dist\jquery.min.js"></script>
 </head>
 
 <body>
@@ -114,7 +114,7 @@
     {{include './layout/footer.html'}}
     {{block 'script'}}{{/block}}
 </body>
-<script src="..\node_modules\jquery\dist\jquery.min.js"></script>
+
 <script src="../public/js/headerandfit.js"></script>
 <script src="../public/js/swiper.min.js"></script>
 <!-- Initialize Swiper -->
@@ -157,6 +157,7 @@
             $.each(d.data, function (i) {
                 if (i % 5 == 0) {
                     var list = $('<div class="lists"></div>');
+                    var lista = $('<a href=/products/' + i + '></a>');
                     var $img = $('<img src="" alt="">');
                     $img.prop('src', this.pho_url);
                     var $ptitle = $('<span></span>');
@@ -165,10 +166,11 @@
                     $ptitle.html(this.pho_name);
                     $price.html("￥:" + this.pho_price)
                     $prank.html("规格:" + this.pho_edition);
-                    list.append($img);
-                    list.append($ptitle);
-                    list.append($price);
-                    list.append($prank);
+                    lista.append($img);
+                    lista.append($ptitle);
+                    lista.append($price);
+                    lista.append($prank);
+                    list.append(lista);
                     $(".mainbox").append(list);
                 }
 

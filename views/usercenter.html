@@ -51,7 +51,13 @@
         .container .content-wraper ul li:first-child {
             display: block;
         }
+
+        .wraper {
+            height: 100%;
+            width: 100%;
+        }
     </style>
+    <script src="..\node_modules\jquery\dist\jquery.min.js"></script>
 </head>
 
 <body>
@@ -69,7 +75,12 @@
         </div>
         <div class="content-wraper fleft">
             <ul id="u-content">
-                <li>用户信息</li>
+                <li>
+                    <div class="wraper">
+
+
+                    </div>
+                </li>
                 <li>我的订单</li>
                 <li>我的收藏</li>
                 <li>我的客服</li>
@@ -81,7 +92,7 @@
     <!-- 底部填充 -->
     {{include './layout/footer.html'}}
 </body>
-<script src="..\node_modules\jquery\dist\jquery.min.js"></script>
+
 <script src="../public/js/headerandfit.js"></script>
 <script>
     $(document).ready(function () {
