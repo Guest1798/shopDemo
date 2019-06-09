@@ -10,7 +10,7 @@ router.use((req, res, next) => {
     //获取请求路径
     var url = req.originalUrl;
     //如果session的user存在说明登陆了  登陆之后不能登陆页面
-    console.log("forbid", url, req.session.user);
+    // console.log("forbid", url, req.session.user);
     if (req.session.user) {
         if (url.indexOf("/login") != -1) {
             res.render("index.html", { user: req.session.user });
@@ -55,7 +55,9 @@ router.get("/usercenter/ordered", function (req, res) {
 for (var i = 0; i < 35; i++) {
     var lj = "/products/" + i;
     router.get(lj, function (req, res) {
-        res.render("products-detail.html", { title: '商品详情页', user: req.session.user });
+        var urlnow = req.originalUrl;
+        var phoneid = urlnow.slice(10, urlnow.length);
+        res.render("products-detail.html", { title: '商品详情页', user: req.session.user, pid: phoneid });
     });
 }
 

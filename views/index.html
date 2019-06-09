@@ -8,7 +8,7 @@
     <title>{{title}}</title>
     <link rel="shortcut icon" href="..\favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="..\public\css\base.css">
-    <link rel="stylesheet" href="..\public\css\header-footer.css">
+    <link rel="stylesheet" href="..\public\css\header-footer-toolbar.css">
     <link rel="stylesheet" href="..\public\css\main.css">
     <link rel="stylesheet" href="..\public\css\font-awesome.min.css">
     <link rel="stylesheet" href="..\public\css\fira_code.css">
@@ -108,6 +108,8 @@
 
     </div>
 
+    {{include './layout/toolbar.html'}}
+
     <!-- 底部填充 -->
     {{include './layout/footer.html'}}
     {{block 'script'}}{{/block}}
@@ -152,21 +154,24 @@
         });
 
         function init(d) {
-            $.each(d.data, function () {
-                var list = $('<div class="lists"></div>');
-                var $img = $('<img src="" alt="">');
-                $img.prop('src', this.pho_url);
-                var $ptitle = $('<span></span>');
-                var $price = $('<span class="colorred"></span>');
-                var $prank = $('<span></span>');
-                $ptitle.html(this.pho_name);
-                $price.html("￥:" + this.pho_price)
-                $prank.html("规格:" + this.pho_edition);
-                list.append($img);
-                list.append($ptitle);
-                list.append($price);
-                list.append($prank);
-                $(".mainbox").append(list);
+            $.each(d.data, function (i) {
+                if (i % 5 == 0) {
+                    var list = $('<div class="lists"></div>');
+                    var $img = $('<img src="" alt="">');
+                    $img.prop('src', this.pho_url);
+                    var $ptitle = $('<span></span>');
+                    var $price = $('<span class="colorred"></span>');
+                    var $prank = $('<span></span>');
+                    $ptitle.html(this.pho_name);
+                    $price.html("￥:" + this.pho_price)
+                    $prank.html("规格:" + this.pho_edition);
+                    list.append($img);
+                    list.append($ptitle);
+                    list.append($price);
+                    list.append($prank);
+                    $(".mainbox").append(list);
+                }
+
             });
         }
     });

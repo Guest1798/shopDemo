@@ -5,20 +5,352 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" href="..\public\css\base.css">
-    <link rel="stylesheet" href="..\public\css\header-footer.css">
+    <link rel="stylesheet" href="..\public\css\header-footer-toolbar.css">
     <link rel="stylesheet" href="..\public\css\font-awesome.min.css">
     <link rel="stylesheet" href="..\public\css\fira_code.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #contain {
+            height: 100%;
+            width: 100%;
+        }
+
+       img {
+            float: left;
+            height: 40%;
+            width: 40%;
+
+        }
+        header img{
+            float:none;
+        }
+
+        #right {
+            height: 100%;
+            width: 50%;
+            float: right;
+            padding-top: 50px;
+        }
+
+        .fon {
+            font-family: "微软雅黑";
+            font-size: 150%;
+        }
+
+        #pprice {
+            display: inline-block;
+            padding-top: 20px;
+            font-size: 200%;
+            color: red;
+            padding-left: 40px;
+        }
+
+        #three {
+            padding-top: 20px;
+        }
+
+        #neirong {
+            height: 40%;
+            width: 85%;
+            float: right;
+
+        }
+
+        #huodong {
+            height: 100px;
+            width: 8%;
+            display: inline-block;
+
+        }
+
+        #dingwei {
+            height: 20px;
+            width: 20px;
+        }
+
+        #address {
+            width: 85%;
+            float: right;
+            display: inline-block;
+        }
+
+        #four {
+            padding-top: 20px;
+        }
+
+        #insurance {
+            padding-top: 20px;
+        }
+
+        #insurance img {
+            height: 20px;
+            width: 20px;
+        }
+
+        .one {
+            height: 20%;
+            width: 30%;
+            border: 1px solid #ccc;
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .onechange {
+            height: 20%;
+            width: 30%;
+            border: 1px solid red;
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .past {
+            height: 20%;
+            width: 30%;
+            float: left;
+            border: 1px solid #ccc;
+            list-style: none;
+            margin-left: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+
+        .pastchange {
+            height: 20%;
+            width: 30%;
+            float: left;
+            border: 1px solid red;
+            list-style: none;
+            margin-left: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #yiwai {
+            height: 60px;
+            width: 60px;
+            float: left;
+
+        }
+
+        #addShopCar {
+            display: inline-block;
+            height: 50px;
+            width: 200px;
+            background: #ff944f;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+            margin-left: 100px;
+        }
+
+        #buy {
+            display: inline-block;
+            height: 50px;
+            width: 200px;
+            background: #ff5e5e;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #anniu {
+            padding-top: 100px;
+        }
+
+        .moreinfo {
+            position: absolute;
+            top: 700px;
+            width: 100%;
+        }
+
+        .moreinfo ul {
+            width: 100%;
+            height: 60px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .moreinfo ul li {
+            float: left;
+            width: 100px;
+            height: 60px;
+            line-height: 60px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .moreinfo ul li:first-child {
+            margin-left: 100px;
+            color: red;
+        }
+
+        .spxq img {
+            display: block;
+            width: 100%;
+        }
+    </style>
 </head>
+
 
 <body>
     <!-- 头部填充 -->
     {{include './layout/header.html'}}
+    <p id="pid" style="opacity: 0">{{pid}}</p>
+    <div class="container">
+        <div class="phonepic">
 
-    商品详情页
+        </div>
+        <div id="contain">
+            <div id="left"></div>
+            <div id="right">
+                <div id="rtop">
+                    <span id="pname" class="fon"></span>
+                    <span id="pcolor" class="fon"></span>
+                    <span id="pedition" class="fon"></span>
+                </div>
+                <div id="rmiddion">
+                    <div id="two">
+                        <span id="">
+                            价&nbsp;&nbsp;&nbsp;&nbsp;格
+                        </span>
+                        <p id="pprice"></p>
+                    </div>
+                    <div id="three">
+                        <p id="huodong">活&nbsp;&nbsp;&nbsp;&nbsp;动</p>
+                        <div id="neirong">
+                            <table id="tab">
+                                <tr>
+                                    <td class="tt">赠品</td>
+                                    <td>保护套</td>
+                                </tr>
+                                <tr>
+                                    <td class="tt">分期</td>
+                                    <td>享受花呗6期,免息分期</td>
+                                </tr>
+                                <tr>
+                                    <td class="tt">积分</td>
+                                    <td>购买即赠积分，积分可抵现</td>
+                                </tr>
+                                <tr>
+                                    <td class="tt">包邮</td>
+                                    <td>青铜及以下满59、白银满39、黄金及以上包邮</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="four">
+                        <span id="">地&nbsp;&nbsp;&nbsp;&nbsp;址</span>
+                        <div id="address">
+                            <img src="https://oss.static.nubia.cn/upload/5ae00f8b59e2087.png" id="dingwei" />
+                            <span id="">安徽省合肥市</span>
+                        </div>
+                    </div>
+                    <div id="">
+
+                    </div>
+                    <div id="insurance">
+                        <span id="yiwai">意&nbsp;外&nbsp;保</span>
+                        <div class="one">
+                            <span>屏碎宝（1年内保修1次）</span>
+                            <p>¥159.00</p>
+                        </div>
+                        <div class="past">
+                            <span>屏碎宝（半年内保修1次）</span>
+                            <p>¥109.00</p>
+                        </div>
+                    </div>
+                    <div id="anniu">
+                        <a href="#" id="addShopCar">加入购物车</a>
+                        <a href="#" id="buy">立即购买</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{if pid==0}}
+    <div class="moreinfo">
+        <ul>
+            <li>商品详情</li>
+            <li>规则参数</li>
+        </ul>
+        <div class="spxq">
+            <img src="https://oss.static.nubia.cn/active/5cce946be6ef996.jpg?imageView2/q/85" alt="" srcset="">
+            <img src="https://oss.static.nubia.cn/active/5cce946c3500e65.jpg?imageView2/q/85" alt="">
+            <img src="https://oss.static.nubia.cn/active/5cce946bcd06e65.jpg?imageView2/q/85" alt="">
+            <img src="https://oss.static.nubia.cn/active/5cce946c21db471.jpg?imageView2/q/85" alt="">
+            <img src="https://oss.static.nubia.cn/active/5cce946f115a391.jpg?imageView2/q/85" alt="">
+        </div>
+
+    </div>
+    {{else}}
+    {{/if}}
+
+
+    {{include './layout/toolbar.html'}}
+
 </body>
 <script src="..\node_modules\jquery\dist\jquery.min.js"></script>
 <script src="../public/js/headerandfit.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url: '../public/datas/phone.json',
+            type: 'get',
+            dataType: "json",
+            success: function (data) {
+                init(data);
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+
+        function init(d) {
+            $.each(d.data, function (i) {
+                if (this.pho_id - 1 == 0 + $("#pid").text()) {
+                    var $img = $('<img src="" alt="">');
+                    $img.prop('src', this.pho_url);
+                    var $ptitle = $('#pname');
+                    var $price = $('#pprice');
+                    $ptitle.html(this.pho_name);
+                    $price.html("￥:" + this.pho_price)
+                    $(".phonepic").append($img);
+                }
+            });
+        }
+    });
+</script>
+<script>
+    $(".one").click(function () {
+        $(".one").toggleClass("onechange");
+        if ($(".past").hasClass("pastchange")) {
+            $(".past").toggleClass("pastchange");
+        }
+    });
+    $(".past").click(function () {
+        $(".past").toggleClass("pastchange");
+        if ($(".one").hasClass("onechange")) {
+            $(".one").toggleClass("onechange");
+        }
+    });
+</script>
 
 </html>
