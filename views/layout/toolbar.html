@@ -6,25 +6,24 @@
     </li>
     <li class="shopcart">
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        <span>7</span>
+        <span id="shopcart-count"></span>
         <div class="shoppingcart">
             <p class="tac">
-                {{user.username}}购物车
+                {{username}}购物车
             </p>
             <ul id="shoppinglist">
-                <p id="sjid">{{user.goods}}</p>
+                <p id="sjid">{{goods}}</p>
             </ul>
         </div>
     </li>
     {{else}}
-
     <li>
         <i class="fa fa-star-o" aria-hidden="true"></i>
         <span>3</span>
     </li>
     <li class="shopcart">
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        <span>7</span>
+        <span></span>
         <div class="shoppingcart">
             <p class="tac">
                 购物车
@@ -38,5 +37,5 @@
     <li id="back2top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></li>
 </ul>
 <script>
-    // $("#shoppinglist")
+
 </script>

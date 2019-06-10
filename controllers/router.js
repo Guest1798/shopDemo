@@ -13,7 +13,10 @@ router.use((req, res, next) => {
     // console.log("forbid", url, req.session.user);
     if (req.session.user) {
         if (url.indexOf("/login") != -1) {
-            res.render("index.html", { user: req.session.user });
+            res.render("index.html", {
+                title: '商城首页',
+                user: req.session.user,
+            });
         }
         else {
             next();
@@ -32,32 +35,59 @@ router.use((req, res, next) => {
 
 //get请求路由
 router.get('/', function (req, res) {
-    res.render("index.html", { title: '商城首页', user: req.session.user });
+    res.render("index.html", {
+        title: '商城首页',
+        user: req.session.user,
+        // goodscount: req.session.user.goods.length,
+        // username: req.session.user.username,
+        // goods: req.session.user.goods
+    });
 });
 router.get('/index', function (req, res) {
-    res.render("index.html", { title: '商城首页', user: req.session.user });
+    res.render("index.html", {
+        title: '商城首页',
+        user: req.session.user,
+        // goodscount: req.session.user.goods.length,
+        // username: req.session.user.username,
+        // goods: req.session.user.goods
+    });
 });
 router.get("/feedback", function (req, res) {
     res.render("feedback.html", { title: '反馈' });
 });
 
 router.get("/products", function (req, res) {
-    res.render("products.html", { title: '全部商品', user: req.session.user });
+    res.render("products.html", {
+        title: '全部商品',
+        user: req.session.user,
+        // goodscount: req.session.user.goods.length,
+        // username: req.session.user.username,
+        // goods: req.session.user.goods
+    });
 });
 router.get("/usercenter", function (req, res) {
     res.render("usercenter.html", { title: '用户中心', user: req.session.user });
 });
 router.get("/usercenter/ordered", function (req, res) {
-    res.render("usercenter.html", { title: '已购买商品', user: req.session.user });
+    res.render("usercenter.html", {
+        title: '已购买商品', user: req.session.user
+    });
 });
 
-//
+//复用详情页
 for (var i = 0; i < 35; i++) {
     var lj = "/products/" + i;
     router.get(lj, function (req, res) {
         var urlnow = req.originalUrl;
         var phoneid = urlnow.slice(10, urlnow.length);
-        res.render("products-detail.html", { title: '商品详情页', user: req.session.user, pid: phoneid });
+        res.render("products-detail.html", {
+            title: '商品详情页',
+            user: req.session.user,
+            // pid: phoneid,
+            // goodscount: req.session.user.goods.length,
+            // username: req.session.user.username,
+            // goods: req.session.user.goods
+        });
     });
 }
 
@@ -71,8 +101,21 @@ for (var i = 0; i < 35; i++) {
             var phoneid = urlnow.slice(10, urlnow.length - 9);
             var username = req.session.user.username;
             User.updateOne({ username: username }, { $push: { goods: phoneid } })
-                .then(function (msg) {
-                    console.log(msg);
+                .then(function (usermsg) {
+                    console.log("返回的信息", usermsg);
+                    User.updateOne({ username: username }, { $push: { goods: phoneid } })
+                        .then(function (msg) {
+                            console.log("添加购物车成功", msg);
+                        });
+
+                    User.findOne({ username: username })
+                        .then(function (data) {
+                            console.log("aaa");
+                            res.status(200).json(data);
+                        }, function (err) {
+                            console.log(err);
+                        });
+
                 }, function (err) {
                     console.log(err);
                 });
@@ -129,7 +172,7 @@ router.post("/login", function (req, res) {
     User.findOne({ username: username, password: password })
         .then(function (data) {
             //用户名或者密码错误 登陆失败
-            console.log(data);
+            console.log("登录的返回信息", data);
             if (data == null) {
                 console.log("用户名或者密码错误");
                 res.render("login.html", { err_message: "用户名或者密码错误" });
@@ -137,7 +180,13 @@ router.post("/login", function (req, res) {
             //用户名密码正确 登陆成功
             else {
                 req.session.user = data;
-                res.render("index.html", { user: req.session.user });
+                res.render("index.html", {
+                    title: '商城首页',
+                    user: req.session.user,
+                    goodscount: req.session.user.goods.length,
+                    username: req.session.user.username,
+                    goods: req.session.user.goods
+                });
             }
         }, function (err) {
             console.log(err, "查询出错");

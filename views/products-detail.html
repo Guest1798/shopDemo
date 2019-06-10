@@ -335,8 +335,8 @@
                     $ptitle.html(this.pho_name);
                     $price.html("￥:" + this.pho_price)
                     $(".phonepic").append($img);
-                    var idx=i+1;
-                    $("#addShopCar").prop("href", idx+"/shopcart");
+                    var idx = i + 1;
+                    $("#addShopCar").prop("href", idx + "/shopcart");
                 }
             });
         }
@@ -359,24 +359,35 @@
 
 <script>
     $("#addShopCar").on("click", function (event) {
-        var aurl=$("#addShopCar").attr("href");
+        var aurl = $("#addShopCar").attr("href");
+        var burl = window.url;
         event.preventDefault(); //使a自带的方法失效，即无法调整到href中的URL(http://www.baidu.com)
         $.ajax({
             type: "POST",
             url: aurl,
             contentType: "application/json",
-            data: JSON.stringify({
-                
-            }), //参数列表
+            data: JSON.stringify({}), //参数列表
             dataType: "json",
             success: function (result) {
                 //请求正确之后的操作
+                console.log(result);
+                shopCartUpdate(result);
             },
             error: function (result) {
                 //请求失败之后的操作
             }
         });
     });
+
+    function shopCartUpdate(data) {
+        $(".shoppingcart>p").text(data.username + "的购物车");
+        $("#shoppinglist").empty();
+        $.each(data.goods, function (i) {
+            $list = $('<li class="sclist"><li>');
+            $list.html("商品" + this[i]);
+            $("#shoppinglist").append($list);
+        })
+    }
 </script>
 
 </html>
