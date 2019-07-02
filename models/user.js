@@ -3,7 +3,7 @@ mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true }, fu
     if (err) {
         console.log('Connection Error:' + err);
     } else {
-        console.log('Connection success!');
+        console.log('MongoDB userDB Connection success!');
     }
 });
 

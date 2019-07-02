@@ -1,20 +1,39 @@
 <header class="headnav">
     <ul class="navbar">
         <!-- 品牌 -->
-        <li class="nav-icon"> <a href="/"><img class="logo" src="../public/images/nubia.PNG" alt="" srcset=""></a></li>
+        <li class="nav-icon"> <a class="logo" href="/">SHOP</a></li>
         <!-- 主要选项 -->
         <li><a href="../products">手机</a> </li>
-        <li>手表</li>
-        <li>配件</li>
-        <li>Support</li>
+        <li> <a href="#">手表</a> </li>
+        <li> <a href="#">配件</a> </li>
+        <li> <a href="#">Support</a> </li>
         <!-- 搜索 -->
         <li class="nav-icon search-btn">
-            <input type="text" class="search-input hide" id="search" />
-            &nbsp;
+            <input type="text" class="search-input" id="search" />
             <i class="fa fa-search" aria-hidden="true"></i>
         </li>
+        <li class="shoppingcart">
+            {{ if user }}
+            <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 20px"></i>&nbsp;购物车</a>
+            <span id="shopcart-count">{{goodscount}}</span>
+            <div class="shoppingcart-panel hide">
+                <p class="tac" style="color: black">
+                    {{user.username}}的购物车
+                </p>
+                <ul id="shoppinglist">
+                    <p id="sjid">{{goods}}</p>
+                </ul>
+            </div>
+            {{else}}
+            <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 20px"></i>&nbsp;购物车</a>
+            <span id="shopcart-count">{{goodscount}}</span>
+            <div class="shoppingcart-panel hide">
+                <p class="tac" style="color: black">用户未登录无法添加购物车</p>
+            </div>
+            {{/if}}
+        </li>
         <!-- 用户 -->
-        <li class="">
+        <li class="user-li">
             {{ if user }}
             <div class="user">
                 <img src="../public\images\icon_ox6ri2dp7gk\default_1.png" alt="用户头像">
@@ -32,5 +51,6 @@
             {{/if}}
         </li>
     </ul>
-    <ul class="navbar-extend hide"></ul>
+    <!-- 导航栏扩展 -->
+    <!-- <ul class="navbar-extend hide"></ul> -->
 </header>

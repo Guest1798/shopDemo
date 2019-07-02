@@ -2,15 +2,14 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var User = require('../models/user');
+// var Goods = require('../models/goods');
 var md5 = require('blueimp-md5');
 
 
 //用户没有登陆的时候的拦截
-router.use((req, res, next) => {
-    //获取请求路径
+router.use(function (req, res, next) {
     var url = req.originalUrl;
-    //如果session的user存在说明登陆了  登陆之后不能登陆页面
-    // console.log("forbid", url, req.session.user);
+    //如果session的user存在说明登陆了
     if (req.session.user) {
         if (url.indexOf("/login") != -1) {
             res.render("index.html", {
@@ -22,10 +21,10 @@ router.use((req, res, next) => {
             next();
         }
     }
-    //没有登陆不能访问  admin  profile
+    //没有登陆不能访问有用户信息相关的页面
     else {
         if (url.indexOf("/usercenter") != -1 || url.indexOf("/usercenter/ordered") != -1) {
-            res.render("login.html");
+            res.redirect("/login");
         }
         else {
             next();
@@ -83,7 +82,7 @@ for (var i = 0; i < 35; i++) {
         res.render("products-detail.html", {
             title: '商品详情页',
             user: req.session.user,
-            // pid: phoneid,
+            pid: phoneid,
             // goodscount: req.session.user.goods.length,
             // username: req.session.user.username,
             // goods: req.session.user.goods
@@ -103,15 +102,9 @@ for (var i = 0; i < 35; i++) {
             User.updateOne({ username: username }, { $push: { goods: phoneid } })
                 .then(function (usermsg) {
                     console.log("返回的信息", usermsg);
-                    User.updateOne({ username: username }, { $push: { goods: phoneid } })
-                        .then(function (msg) {
-                            console.log("添加购物车成功", msg);
-                        });
-
                     User.findOne({ username: username })
                         .then(function (data) {
-                            console.log("aaa");
-                            res.status(200).json(data);
+                            res.status(200).json(data);//返回查找的的用户数据
                         }, function (err) {
                             console.log(err);
                         });

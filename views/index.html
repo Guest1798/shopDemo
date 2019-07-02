@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
-    <link rel="shortcut icon" href="..\favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="..\public\css\base.css">
-    <link rel="stylesheet" href="..\public\css\header-footer-toolbar.css">
+    <link rel="stylesheet" href="..\public\css\layout.css">
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="..\public\css\main.css">
     <link rel="stylesheet" href="..\public\css\font-awesome.min.css">
     <link rel="stylesheet" href="..\public\css\fira_code.css">
@@ -19,15 +20,13 @@
     <style>
         body {
             background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-size: 14px;
             color: #000;
-            margin: 0;
-            padding: 0;
         }
 
         .swiper-container {
-            width: 100%;
+            max-width: 100%;
+            min-width: 1100px;
             height: 400px;
             margin-left: auto;
             margin-right: auto;
@@ -59,8 +58,7 @@
         }
 
         .mainbox {
-            max-width: 1100px;
-            min-width: 320px;
+            width: 1100px;
             height: auto;
             overflow: hidden;
             background-color: rgb(247, 247, 247);
@@ -81,19 +79,22 @@
             height: 832px;
         }
     </style>
-    <script src="..\node_modules\jquery\dist\jquery.min.js"></script>
 </head>
 
 <body>
     <!-- 头部填充 -->
     {{include './layout/header.html'}}
-    <!-- 主要内容 -->
+    <!-- 轮播图 -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="https://oss.static.nubia.cn/blockimage/155972316590.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="https://oss.static.nubia.cn/blockimage/155928849246.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="https://oss.static.nubia.cn/blockimage/155913018962.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="https://oss.static.nubia.cn/blockimage/155928768284.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="https://oss.static.nubia.cn/blockimage/155972316590.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img src="https://oss.static.nubia.cn/blockimage/155928849246.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img src="https://oss.static.nubia.cn/blockimage/155913018962.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img src="https://oss.static.nubia.cn/blockimage/155928768284.jpg" alt="">
+            </div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -101,19 +102,19 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
-
-    {{block 'body'}}{{/block}}
-
+    <!-- 主要内容 -->
     <div class="mainbox">
 
     </div>
 
+    <!-- 悬浮按钮，购物车，收藏等 -->
     {{include './layout/toolbar.html'}}
 
     <!-- 底部填充 -->
     {{include './layout/footer.html'}}
-    {{block 'script'}}{{/block}}
 </body>
+<script src="..\node_modules\jquery\dist\jquery.min.js"></script>
+<!-- <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
 
 <script src="../public/js/headerandfit.js"></script>
 <script src="../public/js/swiper.min.js"></script>
@@ -155,7 +156,7 @@
 
         function init(d) {
             $.each(d.data, function (i) {
-                if (i % 5 == 0) {
+                if (i % 4 == 0) {
                     var list = $('<div class="lists"></div>');
                     var lista = $('<a href=/products/' + i + '></a>');
                     var $img = $('<img src="" alt="">');

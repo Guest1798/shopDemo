@@ -11,10 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "art-template": "^4.13.2",
+    "autoprefixer": "^9.6.0",
     "blueimp-md5": "^2.10.0",
+    "bootstrap": "^3.3.5",
     "express": "^4.17.1",
     "express-art-template": "^1.0.1",
     "jquery": "^3.4.1",
-    "mongoose": "^5.5.12"
+    "mongoose": "^5.5.12",
+    "postcss-cli": "^6.1.2"
   }
 }

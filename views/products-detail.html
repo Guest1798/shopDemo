@@ -7,204 +7,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
     <link rel="stylesheet" href="..\public\css\base.css">
-    <link rel="stylesheet" href="..\public\css\header-footer-toolbar.css">
+    <link rel="stylesheet" href="..\public\css\layout.css">
     <link rel="stylesheet" href="..\public\css\font-awesome.min.css">
     <link rel="stylesheet" href="..\public\css\fira_code.css">
+    <link rel="shortcut icon" href="./public/images/favicon.ico" type="image/x-icon">
     <style type="text/css">
         * {
             margin: 0;
             padding: 0;
         }
-
-        #contain {
-            height: 100%;
-            width: 100%;
+        .container{
+            width: 1000px;
+            height: auto;
         }
-
-        .container img {
-            float: left;
-            height: 40%;
-            width: 40%;
-
+        .phonepic{
+            width: 500px;
         }
-
-        header img {
-            float: none;
+        .phoneinfo{
+            width: 500px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: stretch;
         }
-
-        #right {
-            height: 100%;
-            width: 50%;
-            float: right;
-            padding-top: 50px;
-        }
-
-        .fon {
-            font-family: "微软雅黑";
-            font-size: 150%;
-        }
-
-        #pprice {
-            display: inline-block;
-            padding-top: 20px;
-            font-size: 200%;
-            color: red;
-            padding-left: 40px;
-        }
-
-        #three {
-            padding-top: 20px;
-        }
-
-        #neirong {
-            height: 40%;
-            width: 85%;
-            float: right;
-
-        }
-
-        #huodong {
-            height: 100px;
-            width: 8%;
-            display: inline-block;
-
-        }
-
-        #dingwei {
-            height: 20px;
-            width: 20px;
-        }
-
-        #address {
-            width: 85%;
-            float: right;
-            display: inline-block;
-        }
-
-        #four {
-            padding-top: 20px;
-        }
-
-        #insurance {
-            padding-top: 20px;
-        }
-
-        #insurance img {
-            height: 20px;
-            width: 20px;
-        }
-
-        .one {
-            height: 20%;
-            width: 30%;
-            border: 1px solid #ccc;
-            list-style: none;
-            display: inline-block;
-            margin-left: 40px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .onechange {
-            height: 20%;
-            width: 30%;
-            border: 1px solid red;
-            list-style: none;
-            display: inline-block;
-            margin-left: 40px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .past {
-            height: 20%;
-            width: 30%;
-            float: left;
-            border: 1px solid #ccc;
-            list-style: none;
-            margin-left: 40px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-
-        .pastchange {
-            height: 20%;
-            width: 30%;
-            float: left;
-            border: 1px solid red;
-            list-style: none;
-            margin-left: 40px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        #yiwai {
-            height: 60px;
-            width: 60px;
-            float: left;
-
-        }
-
-        #addShopCar {
-            display: inline-block;
-            height: 50px;
+        .phoneinfo .addOrbuy .add-shop-car{
+            border-radius: 6px;
             width: 200px;
-            background: #ff944f;
-            text-decoration: none;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-            line-height: 50px;
-            margin-left: 100px;
-        }
-
-        #buy {
-            display: inline-block;
-            height: 50px;
-            width: 200px;
-            background: #ff5e5e;
-            text-decoration: none;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-            line-height: 50px;
-        }
-
-        #anniu {
-            padding-top: 100px;
-        }
-
-        .moreinfo {
-            position: absolute;
-            top: 700px;
-            width: 100%;
-        }
-
-        .moreinfo ul {
-            width: 100%;
             height: 60px;
-            background-color: rgb(255, 255, 255);
-        }
-
-        .moreinfo ul li {
-            float: left;
-            width: 100px;
-            height: 60px;
+            background-color: rgb(255, 86, 24);
             line-height: 60px;
-            background-color: rgb(255, 255, 255);
+            color: white;
         }
-
-        .moreinfo ul li:first-child {
-            margin-left: 100px;
-            color: red;
-        }
-
-        .spxq img {
-            display: block;
-            width: 100%;
+        .phoneinfo .addOrbuy .buynow{
+            border-radius: 6px;
+            width: 200px;
+            height: 60px;
+            background-color: rgb(255, 20, 20);
+            line-height: 60px;
+            color: white;
         }
     </style>
     <script src="..\node_modules\jquery\dist\jquery.min.js"></script>
@@ -216,74 +57,25 @@
     {{include './layout/header.html'}}
     <p id="pid" style="opacity: 0">{{pid}}</p>
     <div class="container">
-        <div class="phonepic">
-
+        <div class="phonepic fleft">
         </div>
-        <div id="contain">
-            <div id="left"></div>
-            <div id="right">
-                <div id="rtop">
-                    <span id="pname" class="fon"></span>
-                    <span id="pcolor" class="fon"></span>
-                    <span id="pedition" class="fon"></span>
+        <div class="phoneinfo fleft">
+            <p class="title">
+                商品标题
+            </p>
+            <div class="other-info">
+                其他信息
+            </div>
+            <div class="choose-specification">
+                选购信息
+            </div>
+            <div class="addOrbuy">
+                <div class="add-shop-car tac">
+                    加入购物车
                 </div>
-                <div id="rmiddion">
-                    <div id="two">
-                        <span id="">
-                            价&nbsp;&nbsp;&nbsp;&nbsp;格
-                        </span>
-                        <p id="pprice"></p>
-                    </div>
-                    <div id="three">
-                        <p id="huodong">活&nbsp;&nbsp;&nbsp;&nbsp;动</p>
-                        <div id="neirong">
-                            <table id="tab">
-                                <tr>
-                                    <td class="tt">赠品</td>
-                                    <td>保护套</td>
-                                </tr>
-                                <tr>
-                                    <td class="tt">分期</td>
-                                    <td>享受花呗6期,免息分期</td>
-                                </tr>
-                                <tr>
-                                    <td class="tt">积分</td>
-                                    <td>购买即赠积分，积分可抵现</td>
-                                </tr>
-                                <tr>
-                                    <td class="tt">包邮</td>
-                                    <td>青铜及以下满59、白银满39、黄金及以上包邮</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div id="four">
-                        <span id="">地&nbsp;&nbsp;&nbsp;&nbsp;址</span>
-                        <div id="address">
-                            <img src="https://oss.static.nubia.cn/upload/5ae00f8b59e2087.png" id="dingwei" />
-                            <span id="">安徽省合肥市</span>
-                        </div>
-                    </div>
-                    <div id="">
-
-                    </div>
-                    <div id="insurance">
-                        <span id="yiwai">意&nbsp;外&nbsp;保</span>
-                        <div class="one">
-                            <span>屏碎宝（1年内保修1次）</span>
-                            <p>¥159.00</p>
-                        </div>
-                        <div class="past">
-                            <span>屏碎宝（半年内保修1次）</span>
-                            <p>¥109.00</p>
-                        </div>
-                    </div>
-                    <div id="anniu">
-                        <a href="#" id="addShopCar">加入购物车</a>
-                        <a href="#" id="buy">立即购买</a>
-                    </div>
+                <div class="buynow tac">
+                    立即购买
                 </div>
-
             </div>
         </div>
     </div>
@@ -304,8 +96,6 @@
     </div>
     {{else}}
     {{/if}}
-
-
     {{include './layout/toolbar.html'}}
 
 </body>
@@ -335,8 +125,6 @@
                     $ptitle.html(this.pho_name);
                     $price.html("￥:" + this.pho_price)
                     $(".phonepic").append($img);
-                    var idx = i + 1;
-                    $("#addShopCar").prop("href", idx + "/shopcart");
                 }
             });
         }
@@ -381,10 +169,11 @@
 
     function shopCartUpdate(data) {
         $(".shoppingcart>p").text(data.username + "的购物车");
-        $("#shoppinglist").empty();
+        $("#shoppinglist>li").remove();
         $.each(data.goods, function (i) {
+            console.log(data.goods[i]);
             $list = $('<li class="sclist"><li>');
-            $list.html("商品" + this[i]);
+            $list.html("商品" + data.goods[i]);
             $("#shoppinglist").append($list);
         })
     }

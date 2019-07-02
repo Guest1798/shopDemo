@@ -1,43 +1,51 @@
 //依赖
 var express = require("express");
-var fs = require("fs");
 var app = express();
 var path = require("path");
 var router = require("./controllers/router");
+var wxrouter = require("./controllers/wxrouter");
 var bodyParser = require("body-parser");
-let expressSession = require('express-session');
+var expressSession = require('express-session');
 
 
 
+//后台渲染引擎
 app.engine('html', require('express-art-template'));
-
+//静态资源目录
 app.use('/public/', express.static(path.join(__dirname, './public/')));
-app.set('views', path.join(__dirname, './views/'));
-// app.set('views cache', true);
 app.use('/node_modules/', express.static(path.join(__dirname, './node_modules/')));
+app.set('views', path.join(__dirname, './views/'));
+//设置缓存
+app.set('views cache', true);
 app.use(bodyParser.urlencoded({ extended: false }));
-
 //使用express-session 中间件
 app.use(expressSession({
-    //cookie的名字
     name: "pbk",
     //cookie签名的信息
     secret: 'secret',
-    //cookie的有效时间 3分钟
     cookie: {
         maxAge: 1000 * 60 * 10,
     },
-    //即使session的信息没有变化，也会重新保存session
     resave: false,
-    //如果saveUninitialized为true，他会将没有初始化的session的数据保存到storage中
     saveUninitialized: false,
-    //主要作用：每次请求都重置cookie过期时间
     rolling: true,
-    //指定session数据存储的地方(数据库),默认情况下session会话数据是保存在服务器的内存中
     store: null
 }));
 
-app.use(router);
+
+app.all('*', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Headers', 'Content-type');
+    res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS,PATCH");
+    res.header('Access-Control-Max-Age',6000);//预请求缓存10分钟
+    next();  
+});
+
+
+app.use(router);//pc网页路由
+app.use(wxrouter);//微信小程序路由
+
+
 
 //错误处理
 app.use(function (err, req, res, next) {
